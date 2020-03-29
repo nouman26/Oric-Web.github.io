@@ -1,0 +1,101 @@
+
+footer{
+    height: 100%;
+    background: linear-gradient(to left, #8942a8,#ba382f); 
+}
+footer a{
+        color: white;  
+    }
+footer a:hover{
+        background-color:white; 
+        color:rgb(3, 99, 94);
+        text-decoration: none;
+    }
+
+
+
+
+@media screen and (max-width: 800px){
+.icon-bar2{
+    display: none;
+}
+.icon-bar1 {
+  margin-top: 10px;
+  width: 100%; /* Full-width */
+  background-color: rgb(3, 99, 94); /* Dark-grey background */
+  height: 60px;
+  overflow: auto; /* Overflow due to float */
+
+}
+.icon-bar1 a {
+  float: left; /* Float links side by side */
+  width: 25%; /* Equal width (5 icons with 20% width each = 100%) */
+  text-align: center; /* Center-align text */
+  padding: 5px;
+  color: white; /* White text color */
+  font-size: 30px; /* Increased font size */
+}
+
+.imag{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+}
+
+@media screen and (min-width: 800px){
+    .icon-bar1{
+    display: none;
+}
+.icon-bar2 {
+    margin-top: 10px;
+    width: 100%; /* Full-width */
+    background-color: rgb(3, 99, 94); /* Dark-grey background */
+    overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar2 a p {
+    margin-bottom: 5px;
+}
+
+.icon-bar2 a {
+  float: left; /* Float links side by side */
+  text-align: center; /* Center-align text */
+  width: 25%; /* Equal width (5 icons with 20% width each = 100%) */
+  padding: 10px; /* Some top and bottom padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 36px; /* Increased font size */
+
+}
+
+.col-s1
+{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 1000px){
+.col-s1 {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+
+}
+.col-s1 img{
+   
+  width:40px;
+    padding: 3px;
+  }
+}
+
+@media (max-width: 1000px){
+.col-s1 img{
+  width:40px;
+    padding: 3px;
+    padding-bottom: 10px;
+}}

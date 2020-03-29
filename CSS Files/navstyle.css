@@ -1,0 +1,208 @@
+/* Style the navigation bar */
+.stk{
+  position: relative;
+}
+nav{
+  position: sticky;
+  top: 0;
+}
+nav div{
+  margin: 0px;
+}
+
+
+@media screen and (max-width: 800px){
+header p{
+    display: none;
+  }
+header h1
+  {
+    font-size: 10vw;
+  }
+.nav1{
+    display: none;
+}
+.icon-bar1 {
+  margin:0px;
+  width: 100%; /* Full-width */
+  background-color: rgba(11, 166, 230, 1);
+  height: 53px;
+
+}
+.icon-bar1 a {
+  float: left; /* Float links side by side */
+  width: 25%; /* Equal width (4 icons with 20% width each = 100%) */
+  text-align: center; /* Center-align text */
+  padding: 0%;
+  padding-top: 5px;
+  color: white; /* White text color */
+  font-size: 25px; /* Increased font size */
+  margin:0px;
+}
+.icon-bar1 a:hover {
+  background-color: white;
+  height: 53px;
+  color: rgba(11, 166, 230, 1);
+}
+.imag{
+    margin-right: 0px;
+    margin-left: 2%;
+    
+}
+.font p{
+        font-size: 60%;
+        text-align: center;
+        margin: 0px 0px;
+         font-family:sans-serif;
+                        
+}
+/* for footer horizontal line */
+.lin{
+    color:white;
+    text-align: center;
+    padding: 10px;
+    margin-top: -10px;
+    font-size:15px;
+  }
+  /*-------------------- For Footer ----------------------*/
+    .display-4 {
+    text-align: center;
+    font-size: 29px;
+    padding-bottom: 5px;
+    color: white;
+    border-bottom: 4px solid white;
+}
+  footer h2
+  {
+     font-size: 140%;
+     padding-top: 10px;
+  }
+  .col-s p{
+ font-size: 90%; 
+ padding-top: 1px;
+ color: white;
+}
+.col-s img{
+  width:30px;
+    padding: 3px;
+    padding-bottom: 10px;
+}
+
+
+}
+@media screen and (min-width: 800px){
+  header p{
+    font-size: 1vw;
+  }
+  header h1
+  {
+    font-size: 8vw;
+  }
+.nav2{
+    display: none;
+}
+.navbar {
+  width: 100%;
+  background-color:rgba(11, 166, 230, 1);
+  height: 40px;
+  margin-top:10px;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 0.181%;
+  color: white;
+  text-decoration: none;
+  font-size: 130%;
+  margin-top: -0.6%;
+}
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: white;
+  height: 40px;
+  color: rgba(11, 166, 230, 1);
+}
+/* for footer horizontal line */
+.lin{
+    color:white;
+    text-align: center;
+    padding: 10px;
+    margin-top: -10px;
+  }
+/*-------------------- For Footer ----------------------*/
+.display-4 {
+     text-align: center;
+    font-size: 35px;
+    padding-bottom: 5px;
+    color: white;
+    border-bottom: 4px solid white;
+}
+footer h2
+  {
+     font-size: 170%;
+     padding-top: 10px;
+  }
+.col-s p{
+ font-size: 130%; 
+  padding-top: 5px;
+ color: white;
+}
+.col-s img{
+  width:35px;
+    padding: 3px;
+    padding-bottom: 10px;
+}
+}
+
+/*----------- for footer ---------- */
+footer{
+    height: 100%;
+    background-color:rgba(11, 166, 230, 1);
+}
+footer a{
+        color: white;  
+    }
+footer a:hover{
+        background-color:white; 
+        color:rgba(11, 166, 230, 1);
+        text-decoration: none;
+    }
+/* --------for Social Links---------- */
+.col-s1
+{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 1000px){
+.col-s1 {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+
+}
+.col-s1 img{
+   
+  width:40px;
+    padding: 3px;
+  }
+}
+
+@media (max-width: 1000px){
+.col-s1 img{
+  width:40px;
+    padding: 3px;
+    padding-bottom: 10px;
+}   }
+    .col-s
+{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}

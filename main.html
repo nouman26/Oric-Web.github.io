@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="oric">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>ORIC</title>
+    <!----- favicon----->
+    <link rel="icon" href="image/oric logo2.jpg" type="image/gif" sizes="30x30">
+    <!-------------------BootStrap Files------------------>
+    <link rel="stylesheet" href="Bootstrap files\css\bootstrap-reboot.min.css" type="text/css">
+    <link rel="stylesheet" href="Bootstrap files\css\bootstrap-grid.min.css" type="text/css">
+    <link rel="stylesheet" href="Bootstrap files\css\bootstrap.min.css" type="text/css"> 
+
+    <!-------------------------Angularjs / Js Files------------------>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <!-------------------------CSS Files------------------>
+    <link rel="stylesheet" href="CSS Files/style1.css">
+    <link rel="stylesheet" href="CSS Files/navstyle.css">
+    <link rel="stylesheet" href="CSS Files/slidstyle.css">
+    <link rel="stylesheet" href="CSS Files/topbtnstyle.css">
+
+    <!-- Load an icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body ng-controller="Ctroric">
+    <!----------------Header------------------------->
+<div class="stk">
+<header class="head"> 
+        <img id="imag" src="image/oric logo2.jpg" class="img-fluid" alt="Responsive image" style="float:left; max-width: 8%; max-height: 8%;" >
+        <img id="imag" src="image/mono.jpg" class="img-fluid" alt="Responsive image" style="float:right;max-width: 10%;max-height: 10%;">
+         <h1 style="text-align: center; font-family: Elianto; color: rgba(11, 166, 230, 1);">ORIC</h1>
+         <p style="text-align: center; margin-top: -2vw;  color: rgba(11, 166, 230, 1); ">Offices of Research, Innovation and Commercialization</p>
+</header>
+
+    <!----------------Navigation Side Bar------------------------->
+<nav>
+<div class="navbar ic1 nav1">
+  <a href="#Home"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="#Vision"><i class="fa fa-fw fa-eye"></i>Vision</a>
+  <a href="#Team"><i class="fa fa-fw fa-group"></i> Team</a>
+  <a href="#Contact"><i class="fa fa-fw fa-envelope"></i> Contact us</a>
+</div>
+
+<div class="icon-bar1  nav2 font">                <!------------- screen and (max-width: 800px){---------------------->
+  <a href="#Home" ><i class="fa fa-fw fa-home "><p>Home</p></i></a>
+  <a href="#Vision"><i class="fa fa-fw fa-eye"><p>Vision</p></i></a>
+  <a href="#Team"><i class="fa fa-fw fa-group"><p>Team</p></i></a>
+  <a href="#Contact"><i class="fa fa-fw fa-envelope"><p>Contact</p></i></a>
+</div>
+</nav>
+<!----------------------------------------------------------------->
+<!----------------------------------------------------------------->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+
+<section> <!---------------------------Slid show Images-------------------------------------->
+<div class="slideshow-container">
+
+<div class="mySlides">
+  <div class="numbertext">1 / 3</div>
+  <img src="image\1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">2 / 3</div>
+  <img src="image\2.jpg" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">3 / 3</div>
+  <img src="image\3.jpg" style="width:100%">
+</div>
+
+</div>
+
+<div style="text-align:center; margin-top: 0px;">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<h5 id="Home"></h5>
+<br>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>
+
+    </section><!-----------------------------end of Code slid show------------------------------------>
+
+ <article class="container">
+ 		<div class="common"><!--------------------------Introduction / Home------------------------------>
+        <h2 class="display-5"> Office of Research Innovation and Commerciallization</h2><br>
+        <p id="introduction">
+            The Office of the Research, Innovation and Commercialization has been established at Quaid-e-Awam University of Engineering, Science and Technology, Nawabshah, Sindh, Pakistan. As universities become more entrepreneurial and look toward technology transfer
+            into non-traditional fields, there is a need for alternative conceptualizations of technology transfer that are more accurate and realistic than the traditional linear model. The Office of the Research Innovation and Commercialization are
+            being establish to link research and commercialization from the University with emerging and existing firms across Pakistan and around the world. The ORIC consists of three important wings namely Research Development and Operation, Innovation and Research Commercialization/Entrepreneurship.
+            <h5 id="Vision"></h5>
+        </p>  </div>
+
+        <div class="common"> <!-----------------------Vision---------------------------->
+        <h2 class="display-5">Vision</h2>
+        <p id="introduction">The office's vision is to enable and lead Pakistan's transformation to a knowledge-based economy dependent upon innovation and entrepreneurship.</p>
+        </div>
+
+        <div class="common"> <!-----------------------Objectives---------------------------->
+        <h2 class="display-5">Objective</h2>
+        <p>The ORIC serves the following objectives.</p>
+        <ul>
+        	<li><p>Supporting the strategic research directions and policies of the university</p></li>
+        	<li><p>Improving integration of research and education at all levels of the institution</p></li>
+        	<li><p>Increasing and diversifying external research funding</p></li>
+        	<li><p>Improving recruitment and retention of the top faculty</p></li>
+        	<li><p>Improving and strengthening university-industry relationships</p></li>
+        	<li><p>Promoting entrepreneurship, technology-transfer and commercialization activities which improve and support the economy</p></li><h5 id="Team"></h5>
+        	<li><p>Promoting and improving multi-disciplinary research initiatives</p></li>
+        </div>
+        <div class="common">
+        	<h2 class="display-5">Organizational Structure</h2>
+        	<figure class="img-fluid">
+        		<img src="image/staff.jpg" class="center" alt="Organizational Structure" style="max-width: 100%; max-height: 70%">
+        	</figure>
+        </div>
+    </article>
+<h5 id="Contact"></h5>
+    
+<footer>
+      <div class="container">
+      <h1 class="display-4">Contact us</h1>
+      <h2 style="color: white;">Director : Prof. Dr. Pardeep Kumar</h2><br>  
+        <div class="row">
+             <div class="col-s">
+                <img style="float: left;" src="image/gps.png" alt="Location Logo"><p>Adress : Quaid-e-Awam University Sakrand Road, Nawabshah, Sindh, Pakistan</p>
+              </div> 
+
+              <div class="col-s">
+                <img style="float: left;" src="image/mail.png" alt="Email Logo"><p>Email : director_oric@quest.edu.pk</p>
+              </div>
+
+              <div class="col-s">
+                <img style="float: left;" src="image/phone.png" alt="phone Logo"><p>Phone :+92 244 9370381-5 (Ext. 2640)</p><br>
+              </div>
+          </div>
+
+
+        <h2 style="color: white;">Social Links</h2><br>  
+        <div class="row">
+             <div class="col-s1">
+                  <img src="image/facebook.png" alt="Facebook Logo" ><a href="#Contact" title="Oric Facebook Profile">Facebook</a>
+              </div> 
+
+              <div class="col-s1">
+                <img src="image/twitter.png" alt="twitter Logo" title="Oric twitter Profile"><a href="#Contact" title="Oric twitter Profile">Twitter</a>
+              </div>
+
+              <div class="col-s1">
+                <img src="image/whatsapp.png" alt="whatsapp Logo" title="whatsapp Number"><a href="#Contact" title="whatsapp Number">Whatsapp</a>
+              </div>
+
+              <div class="col-s1">
+                 <img src="image/linkedin.png" alt="Linked in Logo" title="Oric Linkedin Profile"><a href="#Contact" title="Oric Linkedin Profile">Linkedin</a>
+              </div>
+          </div>
+              <hr color="white"> <!------ for Horizontal Line----------------->
+            
+            <h5 class="lin">©2020|All Rights Reserved By ORIC|Developed & Maintained by Nouman & Hadi</h5>
+        </div>
+        
+    </footer>
+
+
+    	</div>
+    	
+
+</div>
+
+</body>
