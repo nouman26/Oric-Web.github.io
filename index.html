@@ -39,15 +39,16 @@
 </header>
 
     <!----------------Navigation Side Bar------------------------->
+    <!------------- screen and (min-width: 800px){---------------------->
 <nav>
-<div class="navbar ic1 nav1">
+<div class="navbar nav1" id="myid1">
   <a href="#Home"><i class="fa fa-fw fa-home"></i> Home</a>
   <a href="#Vision"><i class="fa fa-fw fa-eye"></i>Vision</a>
   <a href="#Team"><i class="fa fa-fw fa-group"></i> Team</a>
   <a href="#Contact"><i class="fa fa-fw fa-envelope"></i> Contact us</a>
 </div>
-
-<div class="icon-bar1  nav2 font">                <!------------- screen and (max-width: 800px){---------------------->
+ <!------------- screen and (max-width: 800px){---------------------->
+<div class="icon-bar1  nav2 font" id="myid2">               
   <a href="#Home" ><i class="fa fa-fw fa-home "><p>Home</p></i></a>
   <a href="#Vision"><i class="fa fa-fw fa-eye"><p>Vision</p></i></a>
   <a href="#Team"><i class="fa fa-fw fa-group"><p>Team</p></i></a>
@@ -58,27 +59,7 @@
 <!----------------------------------------------------------------->
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-<script>
-//Get the button
-var mybutton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
 
 
 
@@ -109,27 +90,6 @@ function topFunction() {
 </div>
 <h5 id="Home"></h5>
 <br>
-<script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 3000); // Change image every 2 seconds
-}
-</script>
 
     </section><!-----------------------------end of Code slid show------------------------------------>
 
@@ -137,11 +97,10 @@ function showSlides() {
  		<div class="common"><!--------------------------Introduction / Home------------------------------>
         <h2 class="display-5"> Office of Research Innovation and Commerciallization</h2><br>
         <p id="introduction">
-            The Office of the Research, Innovation and Commercialization has been established at Quaid-e-Awam University of Engineering, Science and Technology, Nawabshah, Sindh, Pakistan. As universities become more entrepreneurial and look toward technology transfer
-            into non-traditional fields, there is a need for alternative conceptualizations of technology transfer that are more accurate and realistic than the traditional linear model. The Office of the Research Innovation and Commercialization are
-            being establish to link research and commercialization from the University with emerging and existing firms across Pakistan and around the world. The ORIC consists of three important wings namely Research Development and Operation, Innovation and Research Commercialization/Entrepreneurship.
-            <h5 id="Vision"></h5>
-        </p>  </div>
+            The Office of the Research, Innovation and Commercialization has been established at Quaid-e-Awam University of Engineering, Science and Technology, Nawabshah, Sindh, Pakistan. As universities become more entrepreneurial and look toward technology transfer into non-traditional fields, there is a need for alternative conceptualizations of technology transfer that are more accurate and realistic than the traditional linear model. The Office of the Research Innovation and Commercialization are being establish to link research and commercialization from the University with emerging and existing firms across Pakistan and around the world. The ORIC consists of three important wings namely Research Development and Operation, Innovation and Research Commercialization/Entrepreneurship. </p>
+         </div>
+         
+		<h5 id="Vision"></h5>
 
         <div class="common"> <!-----------------------Vision---------------------------->
         <h2 class="display-5">Vision</h2>
@@ -218,5 +177,276 @@ function showSlides() {
     	
 
 </div>
+<script>
 
+var mynav1 = document.getElementById("myid1");		// acces the navigation when screen min-width: 800px
+var mynav2 = document.getElementById("myid2");		// acces the navigation when screen max-width: 800px
+var mybutton = document.getElementById("myBtn");	//Get the Top button
+
+
+window.onscroll = function() {
+								scrollFunction();// When the user scrolls down 20px from the top of the document, show the button
+								// When the user scrolls down from the top of the document hover change automaticaly
+								scrollFunct1();      // Call the function when screen min-width: 800px
+								scrollFunct2(); } 	// Call the function when screen max-width: 800px
+// Function for Hover
+
+// Run the function when screen min-width: 800px
+function scrollFunct1() {
+	// When the user scrolls down from the top of the document, hover is on Home
+  if (document.body.scrollTop >300 && document.body.scrollTop < 600 || document.documentElement.scrollTop >300 && document.documentElement.scrollTop < 600 ) 
+  {
+  	var Home1 = mynav1.firstElementChild;
+  	Home1.style.color = "rgba(11, 166, 230, 1)";
+  	var Hom1 = Home1.classList;
+  	Hom1.add("act");
+
+  	var vision1 = mynav1.firstElementChild.nextElementSibling;
+  	vision1.style.color = "white";
+  	var visio1 = vision1.classList;
+  	visio1.remove("act");
+
+  	var Team1 = mynav1.lastElementChild.previousElementSibling;
+  	Team1.style.color = "white";
+  	var Tea1 = Team1.classList;
+  	Tea1.remove("act");
+
+  	var Contact1 = mynav1.lastElementChild;
+  	Contact1.style.color = "white";
+  	var Contac1 = Contact1.classList;
+  	Contac1.remove("act");
+  }
+
+// When the user scrolls down from the top of the document, hover is on Vision
+  else if (document.body.scrollTop >600 && document.body.scrollTop < 1100 || document.documentElement.scrollTop >600 && document.documentElement.scrollTop < 1100 ) 
+  {
+  	var Home1 = mynav1.firstElementChild;
+  	Home1.style.color = "white";
+  	var Hom1 = Home1.classList;
+  	Hom1.remove("act");
+
+  	var vision1 = mynav1.firstElementChild.nextElementSibling;
+  	vision1.style.color = "rgba(11, 166, 230, 1)";
+  	var visio1 = vision1.classList;
+  	visio1.add("act");
+
+  	var Team1 = mynav1.lastElementChild.previousElementSibling;
+  	Team1.style.color = "white";
+  	var Tea1 = Team1.classList;
+  	Tea1.remove("act");
+
+  	var Contact1 = mynav1.lastElementChild;
+  	Contact1.style.color = "white";
+  	var Contac1 = Contact1.classList;
+  	Contac1.remove("act");
+  }
+
+ // When the user scrolls down from the top of the document, hover is on Team
+ else if (document.body.scrollTop >1000 && document.body.scrollTop < 1500 || document.documentElement.scrollTop >1000 && document.documentElement.scrollTop < 1500 ) 
+  	{
+  	var Home1 = mynav1.firstElementChild;
+  	Home1.style.color = "white";
+  	var Hom1 = Home1.classList;
+  	Hom1.remove("act");
+
+  	var vision1 = mynav1.firstElementChild.nextElementSibling;
+  	vision1.style.color = "white";
+  	var visio1 = vision1.classList;
+  	visio1.remove("act");
+
+  	var Team1 = mynav1.lastElementChild.previousElementSibling;
+  	Team1.style.color = "rgba(11, 166, 230, 1)";
+  	var Tea1 = Team1.classList;
+  	Tea1.add("act");
+
+  	var Contact1 = mynav1.lastElementChild;
+  	Contact1.style.color = "white";
+  	var Contac1 = Contact1.classList;
+  	Contac1.remove("act");
+  }
+// When the user scrolls down from the top of the document, hover is on Contact
+  else if (document.body.scrollTop > 1500|| document.documentElement.scrollTop > 1500 ) 
+  	{
+  	var Home1 = mynav1.firstElementChild;
+  	Home1.style.color = "white";
+  	var Hom1 = Home1.classList;
+  	Hom1.remove("act");
+
+  	var vision1 = mynav1.firstElementChild.nextElementSibling;
+  	vision1.style.color = "white";
+  	var visio1 = vision1.classList;
+  	visio1.remove("act");
+
+  	var Team1 = mynav1.lastElementChild.previousElementSibling;
+  	Team1.style.color = "white";
+  	var Tea1 = Team1.classList;
+  	Tea1.remove("act");
+
+  	var Contact1 = mynav1.lastElementChild;
+  	Contact1.style.color = "rgba(11, 166, 230, 1)";
+  	var Contac1 = Contact1.classList;
+  	Contac1.add("act");
+  }
+
+  else 
+  {
+  	var Home1 = mynav1.firstElementChild;
+  	Home1.style.color = "white";
+  	var Hom1 = Home1.classList;
+  	Hom1.remove("act");
+
+  	var vision1 = mynav1.firstElementChild.nextElementSibling;
+  	vision1.style.color = "white";
+  	var visio1 = vision1.classList;
+  	visio1.remove("act");
+
+  	var Team1 = mynav1.lastElementChild.previousElementSibling;
+  	Team1.style.color = "white";
+  	var Tea1 = Team1.classList;
+  	Tea1.remove("act");
+
+  	var Contact1 = mynav1.lastElementChild;
+  	Contact1.style.color = "white";
+  	var Contac1 = Contact1.classList;
+  	Contac1.remove("act");
+  }
+
+}
+// Run the function when screen max-width: 800px
+function scrollFunct2() {
+	// When the user scrolls down from the top of the document, hover is on Home
+  if (document.body.scrollTop >200 && document.body.scrollTop < 500 || document.documentElement.scrollTop >200 && document.documentElement.scrollTop < 500 ) 
+  {
+  	var Home2 = mynav2.firstElementChild;
+  	var Hom2 = Home2.classList;
+  	Hom2.add("act");
+
+  	var vision2 = mynav2.firstElementChild.nextElementSibling;
+  	var visio2 = vision2.classList;
+  	visio2.remove("act");
+
+  	var Team2 = mynav2.lastElementChild.previousElementSibling;
+  	var Tea2 = Team2.classList;
+  	Tea2.remove("act");
+
+  	var Contact2 = mynav2.lastElementChild;
+  	var Contac2 = Contact2.classList;
+  	Contac2.remove("act");
+  }
+
+// When the user scrolls down from the top of the document, hover is on Vision
+  else if (document.body.scrollTop >500 && document.body.scrollTop < 1000 || document.documentElement.scrollTop >500 && document.documentElement.scrollTop < 1000 ) 
+  {
+  	var Home2 = mynav2.firstElementChild;
+  	var Hom2 = Home2.classList;
+  	Hom2.remove("act");
+
+  	var vision2 = mynav2.firstElementChild.nextElementSibling;
+  	var visio2 = vision2.classList;
+  	visio2.add("act");
+
+  	var Team2 = mynav2.lastElementChild.previousElementSibling;
+  	var Tea2 = Team2.classList;
+  	Tea2.remove("act");
+
+  	var Contact2 = mynav2.lastElementChild;
+  	var Contac2 = Contact2.classList;
+  	Contac2.remove("act");
+  }
+
+ // When the user scrolls down from the top of the document, hover is on Team
+ else if (document.body.scrollTop >1000 && document.body.scrollTop < 1400 || document.documentElement.scrollTop >1000 && document.documentElement.scrollTop < 1400 ) 
+  	{
+  	var Home2 = mynav2.firstElementChild;
+  	var Hom2 = Home2.classList;
+  	Hom2.remove("act");
+
+  	var vision2 = mynav2.firstElementChild.nextElementSibling;
+  	var visio2 = vision2.classList;
+  	visio2.remove("act");
+
+  	var Team2 = mynav2.lastElementChild.previousElementSibling;
+  	var Tea2 = Team2.classList;
+  	Tea2.add("act");
+
+  	var Contact2 = mynav2.lastElementChild;
+  	var Contac2 = Contact2.classList;
+  	Contac2.remove("act");
+  }
+// When the user scrolls down from the top of the document, hover is on Contact
+  else if (document.body.scrollTop > 1400|| document.documentElement.scrollTop > 1400 ) 
+  	{
+  	var Home2 = mynav2.firstElementChild;
+  	var Hom2 = Home2.classList;
+  	Hom2.remove("act");
+
+  	var vision2 = mynav2.firstElementChild.nextElementSibling;
+  	var visio2 = vision2.classList;
+  	visio2.remove("act");
+
+  	var Team2 = mynav2.lastElementChild.previousElementSibling;
+  	var Tea2 = Team2.classList;
+  	Tea2.remove("act");
+
+  	var Contact2 = mynav2.lastElementChild;
+  	var Contac2 = Contact2.classList;
+  	Contac2.add("act");
+  }
+
+  else 
+  {
+  	var Home2 = mynav2.firstElementChild;
+  	var Hom2 = Home2.classList;
+  	Hom2.remove("act");
+
+  	var vision2 = mynav2.firstElementChild.nextElementSibling;
+  	var visio2 = vision2.classList;
+  	visio2.remove("act");
+
+  	var Team2 = mynav2.lastElementChild.previousElementSibling;
+  	var Tea2 = Team2.classList;
+  	Tea2.remove("act");
+
+  	var Contact2 = mynav2.lastElementChild;
+  	var Contac2 = Contact2.classList;
+  	Contac2.remove("act");
+  }
+}  //End of Hover Code
+
+// Function for Button
+function scrollFunction() {
+  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+// Code For Image Slid Show
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>
 </body>

@@ -44,6 +44,13 @@ header h1
   height: 53px;
   color: rgba(11, 166, 230, 1);
 }
+.act{
+  background-color: white;
+  height: 53px;
+}
+.act p,.act i{
+  color: rgba(11, 166, 230, 1);
+}
 .imag{
     margin-right: 0px;
     margin-left: 2%;
@@ -112,17 +119,21 @@ header h1
 .navbar a {
   float: left;
   text-align: center;
-  padding: 0.181%;
+  padding: 5px;
   color: white;
   text-decoration: none;
   font-size: 130%;
-  margin-top: -0.6%;
+  margin-top: -9px;
 }
 /* Navbar links on mouse-over */
 .navbar a:hover {
   background-color: white;
   height: 40px;
   color: rgba(11, 166, 230, 1);
+}
+.act{
+  background-color: white;
+  height: 40px;
 }
 /* for footer horizontal line */
 .lin{
